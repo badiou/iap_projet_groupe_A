@@ -11,8 +11,8 @@ app=Flask(__name__)
 # configuration de la base de données et de l'app Flask
 #
 ###############################################################
-motdepasse=quote_plus(os.getenv('password'))
-hostname=os.getenv('host')
+#motdepasse=quote_plus('B@diou2015')
+#hostname=os.getenv('host')
 
 #app.config['SQLALCHEMY_DATABASE_URI']="postgresql://postgres:{}@{}:5432/api_db".format(motdepasse,hostname)
 app.config['SQLALCHEMY_DATABASE_URI']='postgres://pjvhicwbuhdzrz:cfc6cec73d4c5902affb3989583d2fda75ee40661c699ef29ed029834c666ba5@ec2-34-206-148-196.compute-1.amazonaws.com:5432/d4u7tqk7f8ik5v'
