@@ -53,7 +53,7 @@ class Etudiant(db.Model):
         'email': self.email,
         }
     
-#db.create_all()
+db.create_all()
 ###############################################################
 #
 #  Liste des tous les etudiants
