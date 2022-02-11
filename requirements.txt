@@ -6,8 +6,6 @@ Flask-UUID==0.2
 future==0.18.2
 greenlet==1.1.2
 gunicorn==20.1.0
-python-dateutil==2.8.1
-python-debian===0.1.39ubuntu1
 python-dotenv==0.19.2
 SQLAlchemy==1.4.28
 Werkzeug==2.0.2
