@@ -14,7 +14,8 @@ app=Flask(__name__)
 motdepasse=quote_plus(os.getenv('password'))
 hostname=os.getenv('host')
 
-app.config['SQLALCHEMY_DATABASE_URI']="postgresql://postgres:{}@{}:5432/api_db".format(motdepasse,hostname)
+#app.config['SQLALCHEMY_DATABASE_URI']="postgresql://postgres:{}@{}:5432/api_db".format(motdepasse,hostname)
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://pjvhicwbuhdzrz:cfc6cec73d4c5902affb3989583d2fda75ee40661c699ef29ed029834c666ba5@ec2-34-206-148-196.compute-1.amazonaws.com:5432/d4u7tqk7f8ik5v'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db=SQLAlchemy(app)
 ###############################################################
@@ -52,7 +53,7 @@ class Etudiant(db.Model):
         'email': self.email,
         }
     
-db.create_all()
+#db.create_all()
 ###############################################################
 #
 #  Liste des tous les etudiants
@@ -177,3 +178,6 @@ def bad_request(error):
         "error": 400,
         "message": "Bad request"
         }), 400
+    
+if __name__=='main':
+    app.run(debug=True)
